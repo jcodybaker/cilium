@@ -90,7 +90,7 @@ func NewNodeDiscovery(manager *nodemanager.Manager, mtuConfig mtu.Configuration)
 			UseSingleClusterRoute:   option.Config.UseSingleClusterRoute,
 			EnableIPv4:              option.Config.EnableIPv4,
 			EnableIPv6:              option.Config.EnableIPv6,
-			EnableEncapsulation:     option.Config.Tunnel != option.TunnelDisabled,
+			EnableEncapsulation:     false, // option.Config.Tunnel != option.TunnelDisabled,
 			EnableAutoDirectRouting: option.Config.EnableAutoDirectRouting,
 			EnableLocalNodeRoute:    enableLocalNodeRoute(),
 			AuxiliaryPrefixes:       auxPrefixes,
